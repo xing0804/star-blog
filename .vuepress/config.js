@@ -53,11 +53,26 @@ module.exports = {
       "/docs/typeScript/": [
         "",
         "快速入门",
-        "面向对象"
+        "面向对象",
+        "细化知识点",
+        "细化知识点2",
+        "TS类型工具"
       ],
       "/docs/javaScript/": [
         "",
-        "测试"
+        {
+          title: '基础语法',
+          collapsable: true,
+          children: [
+            "基础语法/数组方法",
+            "基础语法/字符串方法"
+          ]
+        }
+      ],
+      "/docs/node/": [
+        "",
+        "基础内容",
+        "Express"
       ]
     },
     "type": "blog",
@@ -77,6 +92,18 @@ module.exports = {
         "desc": "A simple and beautiful vuepress Blog & Doc theme.",
         "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
         "link": "https://vuepress-theme-reco.recoluan.com"
+      },
+      {
+        "title": "Vue",
+        "desc": "渐进式JavaScript框架",
+        "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+        "link": "https://cn.vuejs.org/"
+      },
+      {
+        "title": "橘子",
+        "desc": "橘子博客",
+        "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+        "link": 'https://blog.smallsunnyfox.com/'
       }
     ],
     "logo": "/myAvatar.png",
@@ -90,5 +117,42 @@ module.exports = {
   },
   "markdown": {
     "lineNumbers": true
-  }
+  },
+  plugins: [
+    [
+      require('./plugins/BgMusic'),
+      {
+        audios: [
+          {
+            name: '晴天',
+            artist: 'Seto',
+            url: '/晴天-周杰伦.128.mp3',
+            cover: '/晴天.webp'
+          },
+          {
+            name: '这，就是爱',
+            artist: 'Seto',
+            url: '/这，就是爱-张杰.128.mp3',
+            cover: '/这就是爱.jpg'
+          },
+          {
+            name: '千里万里',
+            artist: 'CMJ',
+            url: '/千里万里-艾热AIR.mp3',
+            cover: '/千里万里.webp'
+          }
+        ]
+      }
+    ],
+    [
+      '@vuepress/pwa',
+      {
+        serviceWorker: true,
+        updatePopup: {
+          message: '发现新内容可用',
+          buttonText: '刷新'
+        }
+      }
+    ],
+  ]
 }

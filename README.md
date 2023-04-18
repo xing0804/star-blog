@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: STAR-BLOG
-tagline: 热爱前端、准时下班
+tagline: 热爱生活、准时下班
 # heroImage: /hero.png
 # heroImageStyle: {
 #   maxWidth: '600px',
@@ -11,6 +11,7 @@ tagline: 热爱前端、准时下班
 #   background: '#fff',
 #   borderRadius: '1rem',
 # }
+# bgImage: '/蜡笔小新.webp'
 bgImageStyle: {
   height: '450px'
 }
