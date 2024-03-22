@@ -2,7 +2,6 @@
 title: Es6 新增属性及用法
 date: 2022-06-27
 sidebar: 'auto'
-sticky: 2
 categories:
  - javaScript
 tags:
@@ -216,19 +215,111 @@ console.log(result);
 
 ### async_await
 
-D:\BSH\学习计划\code\es6\async_await
+```javascript
+//创建一个promise对象
+    const p = new Promise((resolve, reject) => {
+       resolve('成功！');
+        // reject('失败！');
+    });
+
+    async function main() {
+        try{
+            let result = await p;
+            console.log(result);
+        }catch (e) {
+            console.warn(e);
+        }
+        console.log('after');
+    }
+    main(); // 成功！ after
+```
+
+
 
 ## ES8对象方法的扩展
 
-D:\BSH\学习计划\code\es8\对象方法扩展.html
+```javascript
+const school = {
+        name:'前端代码',
+        class:['一班','二班','三班'],
+        xueke:['前端','后端','大数据']
+    };
+
+    //获取所有对象的键
+    // console.log(Object.keys(school));
+    //获取所有对象的值
+    // console.log(Object.values(school));
+    //entries=>返回结果是一个二维数组，每个数组当中第一个值为key，第二个值为value
+    // console.log(Object.entries(school));
+    //创建Map
+    // const m = new Map(Object.entries(school));
+    // m.set('test',2222);
+    // console.log(m.get('class'));
+
+    //对象属性的描述对象
+    console.log(Object.getOwnPropertyDescriptors(school));
+    // const obj = Object.create(null,{
+    //     name:{
+    //         //设置值
+    //         value: '宝石花',
+    //         //属性特性
+    //         writable:true, //是否写入
+    //         configurable: true, //是否可以删除
+    //         enumerable: true //是否枚举
+    //     }
+    // });
+    // console.log(obj);
+```
+
+
 
 ## ES9
 
 D:\BSH\学习计划\code\es9
 
 * 对象展开和rest对象
+
+  ```javascript
+  const content = ({url,port,...user}) => {
+          console.log(url);
+          console.log(port);
+          console.log(user);
+      }
+      const rest = {
+          url:'127.0.0.1',
+          port:3306,
+          username:'weiyuxing',
+          pwd:'123456'
+      }
+      content(rest);
+  
+  
+      const skillOne = {
+          q: 'one'
+      }
+      const skillTwo = {
+          w: 'two'
+      }
+      const skillThree = {
+          e: 'three'
+      }
+      const skillFour = {
+          r: 'four'
+      }
+  
+      const skill = {
+          ...skillOne,
+          ...skillTwo,
+          ...skillThree,
+          ...skillFour
+      }
+      console.log(skill);
+  ```
+
 * 正则扩展-命名捕获分组
+
 * 正则扩展-反向断言
+
 * 正则扩展-dotAll模式
 
 ## ES10

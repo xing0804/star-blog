@@ -67,12 +67,22 @@ module.exports = {
             "基础语法/数组方法",
             "基础语法/字符串方法"
           ]
+        },
+        {
+          title: '常用方法总结',
+          collapsable: true,
+          children: [
+            "常用方法/js在工作中常用的几个方法"
+          ]
         }
       ],
       "/docs/node/": [
         "",
         "基础内容",
         "Express"
+      ],
+      "/docs/项目/": [
+        ""
       ]
     },
     "type": "blog",
@@ -98,12 +108,6 @@ module.exports = {
         "desc": "渐进式JavaScript框架",
         "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
         "link": "https://cn.vuejs.org/"
-      },
-      {
-        "title": "橘子",
-        "desc": "橘子博客",
-        "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        "link": 'https://blog.smallsunnyfox.com/'
       }
     ],
     "logo": "/myAvatar.png",
@@ -125,19 +129,19 @@ module.exports = {
         audios: [
           {
             name: '晴天',
-            artist: 'Seto',
+            artist: '周杰伦',
             url: '/晴天-周杰伦.128.mp3',
             cover: '/晴天.webp'
           },
           {
             name: '这，就是爱',
-            artist: 'Seto',
+            artist: '张杰',
             url: '/这，就是爱-张杰.128.mp3',
             cover: '/这就是爱.jpg'
           },
           {
             name: '千里万里',
-            artist: 'CMJ',
+            artist: '艾热AIR',
             url: '/千里万里-艾热AIR.mp3',
             cover: '/千里万里.webp'
           }
